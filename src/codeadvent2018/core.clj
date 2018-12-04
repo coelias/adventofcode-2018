@@ -44,4 +44,3 @@
 
 (defn -main [day & args]
   (run-exercise (Integer/parseInt day)))
-
