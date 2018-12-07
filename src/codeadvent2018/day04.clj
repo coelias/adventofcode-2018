@@ -15,21 +15,19 @@
      :id (if (= (first info) \#) info)}))
 
 
-(clojure.pprint/pprint
- (partition-by :id (sort-data data)))
 
 (defn run [input]
   (println "-"))
 
-(let [dat (map parse-record (sort data))]
-  (reduce
-   (fn [prev new]
-
-     )
-   {}
-   dat))
-
-
-(reduce
- {}
- (sort-data ))
+;(let [dat (map parse-record (sort data))]
+;  (reduce
+;   (fn [prev new]
+;
+;     )
+;   {}
+;   dat))
+;
+;
+;(reduce
+; {}
+; (sort-data ))
