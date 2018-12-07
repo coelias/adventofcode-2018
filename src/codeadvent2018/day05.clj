@@ -14,5 +14,20 @@
         (recur (pop acc) (rest input))
         (recur (conj acc (first input)) (rest input))))))
 
+
+(defn delete-letters [txt letter]
+  (let [p (re-pattern (str "(?i)" letter))]
+    (clojure.string/replace txt p "")))
+
+(defn part2 [input]
+  (let [letters (set input)]
+    (->> letters
+         (map #(delete-letters input %))
+         (map #(part1 %))
+         (apply min))))
+
+
+
 (defn run [input]
-  (println (part1 (first input))))
+  (println (part1 (first input)))
+  (println (part2 (first input))))
